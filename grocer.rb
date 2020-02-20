@@ -21,15 +21,15 @@ def consolidate_cart(cart)
   i = 0
 
   while i < cart.length do
-    #checks is the new item exists in the new cart.
+    
     new_item = find_item_by_name_in_collection(cart[i][:item], new_cart)
     
     if new_item != nil
-      #increase the new item counter by one
+      
       new_item[:count] +=1
 
     else 
-      #add in the keys for new item
+      
       new_item = {
         :item => cart[i][:item],
         :price => cart[i][:price],
